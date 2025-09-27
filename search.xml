@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>建设问题及解决</title>
+      <link href="/2025/09/26/%E5%BB%BA%E8%AE%BE%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3/"/>
+      <url>/2025/09/26/%E5%BB%BA%E8%AE%BE%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3/</url>
+      
+        <content type="html"><![CDATA[<h1 id="以下是一些建设过程中遇到的问题："><a href="#以下是一些建设过程中遇到的问题：" class="headerlink" title="以下是一些建设过程中遇到的问题："></a>以下是一些建设过程中遇到的问题：</h1><h2 id="终端显示没有node版本被激活，解决方法："><a href="#终端显示没有node版本被激活，解决方法：" class="headerlink" title="终端显示没有node版本被激活，解决方法："></a>终端显示没有node版本被激活，解决方法：</h2><h3 id="激活-nvm"><a href="#激活-nvm" class="headerlink" title="激活 nvm:"></a>激活 nvm:</h3><p>在 zsh 里运行：</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.nvm/nvm.sh</span><br></pre></td></tr></table></figure><p>然后再运行： </p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nvm list </span><br></pre></td></tr></table></figure><p>看看装过的 Node 版本（比如 v20.19.5）还在不在。</p><h3 id="选择一个-Node-版本："><a href="#选择一个-Node-版本：" class="headerlink" title="选择一个 Node 版本："></a>选择一个 Node 版本：</h3><p>如果 nvm list 里能看到 v20.19.5，就执行：</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nvm use 20</span><br></pre></td></tr></table></figure><p>然后再确认：</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure><h2 id="文章封面的默认设置未生效，解决方法："><a href="#文章封面的默认设置未生效，解决方法：" class="headerlink" title="文章封面的默认设置未生效，解决方法："></a>文章封面的默认设置未生效，解决方法：</h2><h3 id="经查发现default-top-img中的路径有误"><a href="#经查发现default-top-img中的路径有误" class="headerlink" title="经查发现default_top_img中的路径有误"></a>经查发现default_top_img中的路径有误</h3><p>错误写法：</p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">default<span class="emphasis">_top_</span>img: /source/images/top.jpg</span><br></pre></td></tr></table></figure><p>正确写法：</p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">default<span class="emphasis">_top_</span>img: /images/top.jpg</span><br></pre></td></tr></table></figure><p>原因：&#x2F;images&#x2F;1.jpg → 指向 source&#x2F;images&#x2F;1.jpg，这是 Hexo 的约定，生成时会自动复制到 public&#x2F;images&#x2F;1.jpg，所以这样写就够了。</p><h4 id="ps：YAML语法要求冒号后必须有空格"><a href="#ps：YAML语法要求冒号后必须有空格" class="headerlink" title="ps：YAML语法要求冒号后必须有空格"></a>ps：YAML语法要求冒号后必须有空格</h4>]]></content>
+      
+      
+      <categories>
+          
+          <category> Blog </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> Butterfly </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
