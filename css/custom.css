@@ -1,0 +1,94 @@
+
+/* 翻页按钮居中 */
+#pagination {
+  width: 100%;
+  margin: auto;
+}
+
+/* 一级菜单居中 */
+#nav .menus_items {
+  position: absolute !important;
+  width: fit-content !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+/* 子菜单横向展示 */
+#nav .menus_items .menus_item:hover .menus_item_child {
+  display: flex !important;
+}
+/* 这里的2是代表导航栏的第2个元素，即有子菜单的元素，可以按自己需求修改 */
+.menus_items .menus_item:nth-child(2) .menus_item_child {
+  left: -125px;
+}
+
+
+/* 页脚与头图透明 */
+#footer {
+    background: transparent !important;
+  }
+  #page-header {
+    background: transparent !important;
+  }
+  
+  /* 白天模式遮罩透明 */
+  #footer::before {
+    background: transparent !important;
+  }
+  #page-header::before {
+    background: transparent !important;
+  }
+  
+  /* 夜间模式遮罩透明 */
+  [data-theme="dark"] #footer::before {
+    background: transparent !important;
+  }
+  [data-theme="dark"] #page-header::before {
+    background: transparent !important;
+  }
+
+/* 说说点赞按钮 */
+.shuoshuo-like-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  padding: 4px 10px;
+  border-radius: 14px;
+  background: rgba(0,0,0,0.04);
+  transition: all 0.25s ease;
+  user-select: none;
+  font-size: 14px;
+  color: #666;
+}
+.shuoshuo-like-btn:hover {
+  background: rgba(255,107,107,0.12);
+  color: #ff6b6b;
+}
+.shuoshuo-like-btn.liked {
+  color: #ff6b6b;
+  cursor: default;
+}
+.shuoshuo-like-btn.liked i {
+  animation: shuoshuoLikePop 0.4s ease;
+}
+@keyframes shuoshuoLikePop {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.4); }
+  60% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+.shuoshuo-like-count {
+  font-weight: 500;
+}
+[data-theme="dark"] .shuoshuo-like-btn {
+  background: rgba(255,255,255,0.06);
+  color: #aaa;
+}
+[data-theme="dark"] .shuoshuo-like-btn:hover {
+  background: rgba(255,107,107,0.2);
+  color: #ff6b6b;
+}
+[data-theme="dark"] .shuoshuo-like-btn.liked {
+  color: #ff6b6b;
+}
+
